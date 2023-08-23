@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { it, expect } from "vitest";
-import Button from "../components/Button.vue";
+import Button from "../components/AppButton.vue";
 
 it("renders button with provided label", () => {
   const wrapper = mount(Button, {

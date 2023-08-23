@@ -12,7 +12,7 @@ import { computed, ref } from 'vue'
 type ButtonType = 'ambiente' | 'economia' | 'mundo' | 'non-profit' | 'politica' | 'societa' | 'welfare'
 type ButtonSize = 'S' | 'M' | 'L' | 'XL'
 const { label, btnType, disabled = false, ariaLabel, btnSize = 'L' } = defineProps<{
-  btnType?: ButtonType,
+  btnType: ButtonType,
   disabled: boolean,
   ariaLabel: string,
   btnSize: ButtonSize,
