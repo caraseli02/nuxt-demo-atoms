@@ -50,7 +50,11 @@ const handleClick = () => {
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
+}
+
+.atoms-button:hover {
+  color: rgba(0, 0, 0, .5);
 }
 
 .atoms-button-S {
