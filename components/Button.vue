@@ -1,5 +1,6 @@
 <template>
-  <button :class="buttonClass" :disabled="disabled" @click="handleClick" :aria-label="ariaLabel || 'Button'">
+  <button :class="buttonClass" :disabled="disabled" @click="handleClick" :aria-label="ariaLabel || 'Button'"
+    data-test="btn">
     <slot name="icon" />
     <slot>{{ label }}</slot>
   </button>
@@ -17,7 +18,6 @@ const { label, btnType, disabled = false, ariaLabel, btnSize = 'L' } = definePro
   btnSize: ButtonSize,
   label: string
 }>()
-const emit = defineEmits(['click'])
 
 const isActive = ref(false)
 const buttonClass = computed(() => {
@@ -31,10 +31,7 @@ const buttonClass = computed(() => {
   ];
 })
 const handleClick = () => {
-  // if (!disabled) {
-  //   return emit('click');
-  // }
-  if(btnType){
+  if (btnType) {
     isActive.value = !isActive.value;
   }
 }
