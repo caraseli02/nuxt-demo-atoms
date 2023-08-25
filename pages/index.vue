@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="max-w-[1440px] mx-auto relative">
     <AppTabs @tabChange="selectedTab = $event" class="py-6 px-10 hidden lg:block" :tabs="['Tutti i temi', ...tabs]" />
     <section
-      class="py-4 px-6 lg:py-6 lg:px-10 flex gap-3 lg:gap-0 flex-col md:flex-row w-screen justify-between items-center bg-[#F4F4F4] border-b border-t border-black">
+      class="py-4 px-6 lg:py-6 lg:px-10 flex gap-3 lg:gap-0 flex-col md:flex-row w-100% justify-between items-center bg-[#F4F4F4] border-b border-t border-black">
       <h4 class="font-bold leading-[2.875rem] w-full text-start text-lg lg:text-5xl capitalize">
         {{ selectedTab }}
       </h4>

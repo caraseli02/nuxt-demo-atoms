@@ -33,7 +33,7 @@ const imgUrl = computed(() => {
   gap: 1.5rem;
 }
 
-.content-bottom{
+.content-bottom {
   justify-self: end;
 }
 
@@ -42,7 +42,7 @@ const imgUrl = computed(() => {
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 2.75rem 2.5rem;
+  padding: 1.5rem 1rem;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
@@ -58,18 +58,16 @@ const imgUrl = computed(() => {
   font-style: normal;
   font-weight: 700;
   line-height: 3.375rem;
-  width: max(70vw, 24.375remm);
+  width: 70%;
 }
 
 @media (min-width: 1250px) {
   .card-title {
-  font-size: 2.5rem;
-  width: max(60vw, 51.4375rem);
-
+    width: 60%;
   }
 
   .responsive-card {
-    padding: 1.5rem 1rem;
+    padding: 2.75rem 2.5rem;
   }
 }
 
