@@ -15,12 +15,19 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+
 const props = defineProps<{
   tabs: string[]
 }>()
+
+const emit = defineEmits<{
+  tabChange: [tab: string]
+}>()
+
 const selectedTab = ref<string | null>(null)
 const changeSelectedTab = (tab: string) => {
   selectedTab.value = tab;
+  emit("tabChange", tab);
 }
 onMounted(() => {
   changeSelectedTab(props.tabs[0]);
@@ -124,7 +131,7 @@ button::-moz-focus-inner {
   bottom: 0;
   border-bottom: 0.5625rem solid #FF2C33;
   animation: oneBefore 1s;
-  transform: translateY(15px);
+  transform: translateY(25px);
   opacity: 1;
 }
 </style>
