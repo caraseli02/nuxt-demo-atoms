@@ -12,10 +12,10 @@ import { computed, ref } from 'vue'
 type ButtonType = 'ambiente' | 'economia' | 'mundo' | 'non-profit' | 'politica' | 'societa' | 'welfare'
 type ButtonSize = 'S' | 'M' | 'L' | 'XL'
 const { label, btnType, disabled = false, ariaLabel, btnSize = 'L' } = defineProps<{
-  btnType: ButtonType,
-  disabled: boolean,
-  ariaLabel: string,
-  btnSize: ButtonSize,
+  btnType?: ButtonType,
+  disabled?: boolean,
+  ariaLabel?: string,
+  btnSize?: ButtonSize,
   label: string
 }>()
 
@@ -51,6 +51,7 @@ const handleClick = () => {
   font-weight: 700;
   text-transform: uppercase;
   transition: all 0.3s linear;
+  
 }
 
 .atoms-button:hover {
@@ -58,7 +59,7 @@ const handleClick = () => {
 }
 
 .atoms-button-S {
-  height: 1.25rem;
+  height: 1.5rem;
   padding: 0.25rem 0.75rem;
   align-items: flex-start;
   flex-shrink: 0;

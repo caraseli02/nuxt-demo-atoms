@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 const props = defineProps<{
-    size: "sm" | "xl"
+    size?: "sm" | "xl"
     direction?: "row" | "col"
     imageUrl?: string
     title?: string
@@ -33,12 +33,12 @@ const imgSize = computed(() => {
 })
 
 const imgPlaceholder = computed(() => {
-    let sizeValue = "https://via.placeholder.com/48x48"; // Default size
+    let sizeValue = "https://picsum.photos/48/48"; // Default size
 
     if (props.size === "sm") {
-        sizeValue = "https://via.placeholder.com/32x32";;
+        sizeValue = "https://picsum.photos/32/32";;
     } else if (props.size === "xl") {
-        sizeValue = "https://via.placeholder.com/84x84";;
+        sizeValue = "https://picsum.photos/84/84";;
     }
 
     return sizeValue;
